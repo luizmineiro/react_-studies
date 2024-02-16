@@ -7,8 +7,9 @@ export const EmojiRating = ({ rate }: Props) => {
   if (rate < 0) rate = 0;
 
   const rateInt = Math.floor(rate);
+  const emojis = ["", "😥", "😑", "🤨", "🙂", "😁"];
 
-  const stars = "🌟".repeat(rateInt) + "⭐".repeat(5 - rateInt);
+  const stars = `${emojis[rateInt]}`.repeat(rateInt) + "😶".repeat(5 - rateInt);
 
   return (
     <div className="flex items-center text-6xl">
